@@ -1,3 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 2018/1/10
+ * Time: 上午 12:26
+ */
+session_start();
+
+if(isset($_SESSION['id'])){
+    include ("mysql_connect.inc.php");
+    $sql="SELECT *FROM user where id ='id'";
+    $result = mysqli_query($link,$sql);
+    $row = @mysqli_fetch_row($result);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,14 +68,20 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="profile.html">Profile</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="publication.html">Publication</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li class="active"><a href="profile.php">Profile</a></li>
+                <li><a href="activity.php">Activity</a></li>
+                <li><a href="program.php">Program</a></li>
+                <li><a href="publication.php">Publication</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                if (isset($_SESSION['id'])){
+                    echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+                }else{
+                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
@@ -88,14 +110,14 @@
             <ol class='pubList'>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Chief of Development Division, Big Data Research Center, Asia University, May, 2017 ~ Present.<br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Associate Professor of Practice, Department of Computer Science and Information Engineering, Asia University, Feb., 2017 ~ Present.
-                <br><br></font>
+                    <br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Manager, Business Operation Division, LOFTechnology, Inc., Nov., 2014 ~ Jan., 2017.<br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> R&D Manager, Advanced Research Institute, Institute for Information Industry, Jul., 2011 ~ Nov., 2014.<br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Assistant Research Fellow, Information and Communications Technology Lab (under Diamond Program), Microelectronics and Information Systems Research Center, National Chiao Tung University, Aug., 2010 ~ Jul., 2011.<br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Assistant Research Fellow and Project Manager, Network Benchmarking Lab (NBL), National Chiao Tung University, Aug., 2010 ~ Jul., 2011.<br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Assistant Research Fellow and Consultant, D-Link NCTU Joint Research Center (DNJRC), National Chiao Tung University, Aug., 2010 ~ Jul., 2011.<br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Postdoctoral Researcher, D-Link NCTU Joint Research Center (DNJRC), National Chiao Tung University, Jul., 2008 ~ Jul., 2010.
-                <br><br></font>
+                    <br><br></font>
                 <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Research Intern, Wireless and Networking Group, Microsoft Research Asia, Mar., 2006 ~ Sep., 2006.<br><br></font>
             </ol>
         </div>

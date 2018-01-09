@@ -13,13 +13,14 @@
 
 <div class="container">
 
-    <form class="form-signin">
+    <form class="form-signin" name="form" method="post" action="connect.php">
         <h1 class="form-signin-heading text-muted">Sign In</h1>
-        <input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
-        <input type="password" class="form-control" placeholder="Password" required="">
+        <input type="text" class="form-control" placeholder="Email address" name="id">
+        <input type="password" class="form-control" placeholder="Password" name="pw">
         <button class="btn btn-lg btn-primary btn-block" type="submit">
             Sign In
         </button>
+        <h1 class="form-signin-heading text-muted"><a href="register.php">申請帳號</a></h1>
     </form>
 
 </div>

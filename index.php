@@ -1,3 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 2018/1/10
+ * Time: 上午 12:13
+ */
+session_start();
+
+if(isset($_SESSION['id'])){
+    include ("mysql_connect.inc.php");
+    $sql="SELECT *FROM user where id ='id'";
+    $result = mysqli_query($link,$sql);
+    $row = @mysqli_fetch_row($result);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,14 +68,20 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="activity.html">Activity</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="publication.html">Publication</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="activity.php">Activity</a></li>
+                <li><a href="program.php">Program</a></li>
+                <li><a href="publication.php">Publication</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                if (isset($_SESSION['id'])){
+                    echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
+                }else{
+                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
@@ -120,11 +142,11 @@
             <p align="justify" style="margin-top: 15px; margin-bottom: 15px">
                 <font face="Times New Roman" size="4">Office: I412, No. 500, Lioufeng Rd., Wufeng Dist., Taichung, 41354, Taiwan</font></p>
         </div>
-</div><br>
+    </div><br>
 
-<footer class="container-fluid text-center">
-    <p>Email: tommyho@aia.edu.tw / tommyho@cs.nctu.edu.tw Tel: +886-4-2332-3456 #1852</p>
-</footer>
+    <footer class="container-fluid text-center">
+        <p>Email: tommyho@aia.edu.tw / tommyho@cs.nctu.edu.tw Tel: +886-4-2332-3456 #1852</p>
+    </footer>
 </div>
 </body>
 </html>
