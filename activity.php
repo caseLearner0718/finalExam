@@ -73,6 +73,9 @@ if(isset($_SESSION['id'])){
                 <li class="active"><a href="activity.php">Activity</a></li>
                 <li><a href="program.php">Program</a></li>
                 <li><a href="publication.php">Publication</a></li>
+                <li><a href="https://www.researchgate.net/profile/Cheng_Yuan_Ho">ResearchGate</a></li>
+                <li><a href="https://tw.linkedin.com/in/chengyuanho/">Linkedin</a></li>
+                <li><a href="cv.php">CV</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php

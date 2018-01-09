@@ -55,7 +55,6 @@ if(isset($_SESSION['id'])){
     </style>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -73,6 +72,9 @@ if(isset($_SESSION['id'])){
                 <li><a href="activity.php">Activity</a></li>
                 <li><a href="program.php">Program</a></li>
                 <li><a href="publication.php">Publication</a></li>
+                <li><a href="https://www.researchgate.net/profile/Cheng_Yuan_Ho">ResearchGate</a></li>
+                <li><a href="https://tw.linkedin.com/in/chengyuanho/">Linkedin</a></li>
+                <li><a href="cv.php">CV</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
@@ -112,7 +114,6 @@ if(isset($_SESSION['id'])){
             </div>
         </div>
     </div>
-
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -123,7 +124,7 @@ if(isset($_SESSION['id'])){
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<embed src="http://w13.loxa.edu.tw/cy-ms93324/mikuclock.swf" width="120" height="135" type="application/x-shockwave-flash">
 <div class="container text-center">
     <h3>What We Do</h3><br>
     <div>
