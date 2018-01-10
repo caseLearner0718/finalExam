@@ -76,6 +76,11 @@ if(isset($_SESSION['id'])){
                 <li><a href="https://www.researchgate.net/profile/Cheng_Yuan_Ho">ResearchGate</a></li>
                 <li><a href="https://tw.linkedin.com/in/chengyuanho/">Linkedin</a></li>
                 <li><a href="cv.php">CV</a></li>
+                <?php
+                if (isset($_SESSION['id'])){
+                    echo '<li><a href="controllTable.php">Controll table</a></li>';
+                }
+                ?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php

@@ -31,6 +31,6 @@ if($_SESSION['id'] != null && $pw != null && $pw2 != null && $pw == $pw2)
 else
 {
     echo '您無權限觀看此頁面!';
-    echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.php">';
+    echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.html">';
 }
 ?>

@@ -13,12 +13,11 @@ if($_SESSION['id'] != null){
     echo "要刪除的帳號：<input type=\"text\" name=\"id\" /> <br><br>";
     echo "<input type=\"submit\" name=\"button\" value=\"刪除\" />";
     echo "</form>";
-
 }
 else
 {
     echo '您無權限觀看此頁面!';
-    echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.php">';
+    echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.html">';
 }
 ?>
     </body>

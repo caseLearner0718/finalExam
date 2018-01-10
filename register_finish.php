@@ -18,7 +18,7 @@ if($id != null && $pw != null && $pw2 != null && $pw == $pw2)
     if(mysqli_query($link,$sql))
     {
         echo '新增成功!';
-        echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.php">';
+        echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.html">';
     }
     else
     {
@@ -29,6 +29,6 @@ if($id != null && $pw != null && $pw2 != null && $pw == $pw2)
 else
 {
     echo '您無權限觀看此頁面!';
-    echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.php">';
+    echo '<meta http-equiv="REFRESH" CONTENT="2;url=login.html">';
 }
 ?>

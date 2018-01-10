@@ -75,13 +75,19 @@ if(isset($_SESSION['id'])){
                 <li><a href="https://www.researchgate.net/profile/Cheng_Yuan_Ho">ResearchGate</a></li>
                 <li><a href="https://tw.linkedin.com/in/chengyuanho/">Linkedin</a></li>
                 <li><a href="cv.php">CV</a></li>
+                <?php
+                if (isset($_SESSION['id'])){
+                    echo '<li><a href="controllTable.php">Controll table</a></li>';
+                }
+                ?>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php
                 if (isset($_SESSION['id'])){
                     echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
                 }else{
-                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                    echo '<li><a href="login.html"><span class="glyphico glyphicon-log-in"></span> Login</a></li>';
                 }
                 ?>
             </ul>
@@ -124,8 +130,8 @@ if(isset($_SESSION['id'])){
         <span class="sr-only">Next</span>
     </a>
 </div>
-<embed src="http://w13.loxa.edu.tw/cy-ms93324/mikuclock.swf" width="120" height="135" type="application/x-shockwave-flash">
-<div class="container text-center">
+
+    <div class="container text-center">
     <h3>What We Do</h3><br>
     <div>
         <div>
@@ -144,8 +150,10 @@ if(isset($_SESSION['id'])){
                 <font face="Times New Roman" size="4">Office: I412, No. 500, Lioufeng Rd., Wufeng Dist., Taichung, 41354, Taiwan</font></p>
         </div>
     </div><br>
-
-    <footer class="container-fluid text-center">
+     <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.5721582672886!2d120.68521641538392!3d24.0461479833298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693b17a99d736b%3A0x1c471d70cdc89dc9!2z5Lqe5rSy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1514882014883" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </div>
+         <footer class="container-fluid text-center">
         <p>Email: tommyho@aia.edu.tw / tommyho@cs.nctu.edu.tw Tel: +886-4-2332-3456 #1852</p>
     </footer>
 </div>
