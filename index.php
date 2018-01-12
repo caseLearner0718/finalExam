@@ -6,13 +6,6 @@
  * Time: 上午 12:13
  */
 session_start();
-
-if(isset($_SESSION['id'])){
-    include ("mysql_connect.inc.php");
-    $sql="SELECT *FROM user where id ='id'";
-    $result = mysqli_query($link,$sql);
-    $row = @mysqli_fetch_row($result);
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -135,17 +128,31 @@ if(isset($_SESSION['id'])){
     <h3>What We Do</h3><br>
     <div>
         <div>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">Dr. Cheng-Yuan Ho is currently an Associate Professor of Practice in the Department of Computer Science and Information Engineering, and a Chief of Development Division in the Big Data Research Center at Asia University.</font></p>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">He received his Bachelor degrees in Mathematics, and Information and Computer Education from National Taiwan Normal University in 2003, the M.S. degree in Computer Science and Information Engineering from National Chiao Tung University (NCTU) in 2004 (enrolled into Ph. D. program directly), and the Ph. D. degree in Computer Science from NCTU in 2008.</font></p>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">He was a winner of Microsoft Fellowship 2005. From March to September, 2006, he was an intern and worked for the Wireless and Networking Group of Microsoft Research Asia, Beijing, China. During this period, he assisted in developing Compound TCP (CTCP), which is supported by Windows XP, Vista, 7 and 8, Windows Server 2003 and 2008, and Linux.</font></p>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">He was a postdoctoral researcher of D-Link NCTU Joint Research Center at NCTU from July 2008 to July 2010 and an assistant researcher of Information and Communications Technology Lab of Microelectronics and Information Systems Research Center under NCTU's Diamond Program from August 2010 to July 2011. He worked at Advanced Research Institute (ARI) at Institute for Information Industry (III) as a R&amp;D manager from July 2011 to November 2014. He joined LOFTechnology, Inc. as a business operation manager from November 2014 to January 2017.</font></p>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px">
-                <font face="Times New Roman" size="4">Among the projects he led/managed after 2008, the two projects, &quot;community-based healthcare cloud service&quot; and &quot;Mydlink 1.5&quot; (now called Mydlink Cloud), that impressed him most. This is because the former was not only nominated for 2013 R&amp;D 100 Awards but also the 3rd among the winners of 2013 Technology Contest in III, while the latter, Mydlink 1.5 project, supported the communication technologies of Mydlink cloud service and the sale volume of its related products was about 600 K in 2011.</font></p>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px">
-                <font face="Times New Roman" size="4">His main research is focusing on computer networks and Internet of Things (IoT). For example, his research areas are information-centric networking (ICN), peer-to-peer (P2P) network, wireless networks, such as WiMAX and WiFi, and network protocols and algorithms, especially for transmission control protocol (TCP). Until now, he has 25 international journal papers, 11 international conference papers, and 1 expired Internet Engineering Task Force (IETF) standard application.</font></p>
-            <p align="justify" style="margin-top: 15px; margin-bottom: 15px">
-                <font face="Times New Roman" size="4">He also has experience in patent invention related to systems, methods, and components of the software, computer, communication, and network, patent portfolio management, intellectual property counseling, and patent applications. For example, he has 12 patents and 17 patent applications, totally equaling to 10
-                    patent families. Furthermore, at ARI, he plays another role as an in house patent engineer (IHPE) to assist colleagues in obtaining patents and patent portfolios, and making patent development strategy.</font></p>
+            <?php
+            include("mysql_connect.inc.php");
+            $dataName = "homeData";
+            $sql="SELECT * FROM `$dataName` where 1";
+            $result = mysqli_query($link,$sql);
+            while($row = @mysqli_fetch_row($result))
+            {
+            echo "<p align=\"justify\" style=\"margin-top: 15px; margin-bottom: 15px\"><font size=\"4\" face=\"Times New Roman\">";
+                echo "$row[1]";
+                echo "</font></p>";
+            echo "
+            ";
+            }
+            ?>
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">Dr. Cheng-Yuan Ho is currently an Associate Professor of Practice in the Department of Computer Science and Information Engineering, and a Chief of Development Division in the Big Data Research Center at Asia University.</font></p>-->
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">He received his Bachelor degrees in Mathematics, and Information and Computer Education from National Taiwan Normal University in 2003, the M.S. degree in Computer Science and Information Engineering from National Chiao Tung University (NCTU) in 2004 (enrolled into Ph. D. program directly), and the Ph. D. degree in Computer Science from NCTU in 2008.</font></p>-->
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">He was a winner of Microsoft Fellowship 2005. From March to September, 2006, he was an intern and worked for the Wireless and Networking Group of Microsoft Research Asia, Beijing, China. During this period, he assisted in developing Compound TCP (CTCP), which is supported by Windows XP, Vista, 7 and 8, Windows Server 2003 and 2008, and Linux.</font></p>-->
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px"><font size="4" face="Times New Roman">He was a postdoctoral researcher of D-Link NCTU Joint Research Center at NCTU from July 2008 to July 2010 and an assistant researcher of Information and Communications Technology Lab of Microelectronics and Information Systems Research Center under NCTU's Diamond Program from August 2010 to July 2011. He worked at Advanced Research Institute (ARI) at Institute for Information Industry (III) as a R&amp;D manager from July 2011 to November 2014. He joined LOFTechnology, Inc. as a business operation manager from November 2014 to January 2017.</font></p>-->
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px">-->
+<!--                <font face="Times New Roman" size="4">Among the projects he led/managed after 2008, the two projects, &quot;community-based healthcare cloud service&quot; and &quot;Mydlink 1.5&quot; (now called Mydlink Cloud), that impressed him most. This is because the former was not only nominated for 2013 R&amp;D 100 Awards but also the 3rd among the winners of 2013 Technology Contest in III, while the latter, Mydlink 1.5 project, supported the communication technologies of Mydlink cloud service and the sale volume of its related products was about 600 K in 2011.</font></p>-->
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px">-->
+<!--                <font face="Times New Roman" size="4">His main research is focusing on computer networks and Internet of Things (IoT). For example, his research areas are information-centric networking (ICN), peer-to-peer (P2P) network, wireless networks, such as WiMAX and WiFi, and network protocols and algorithms, especially for transmission control protocol (TCP). Until now, he has 25 international journal papers, 11 international conference papers, and 1 expired Internet Engineering Task Force (IETF) standard application.</font></p>-->
+<!--            <p align="justify" style="margin-top: 15px; margin-bottom: 15px">-->
+<!--                <font face="Times New Roman" size="4">He also has experience in patent invention related to systems, methods, and components of the software, computer, communication, and network, patent portfolio management, intellectual property counseling, and patent applications. For example, he has 12 patents and 17 patent applications, totally equaling to 10-->
+<!--                    patent families. Furthermore, at ARI, he plays another role as an in house patent engineer (IHPE) to assist colleagues in obtaining patents and patent portfolios, and making patent development strategy.</font></p>-->
             <p align="justify" style="margin-top: 15px; margin-bottom: 15px">
                 <font face="Times New Roman" size="4">Office: I412, No. 500, Lioufeng Rd., Wufeng Dist., Taichung, 41354, Taiwan</font></p>
         </div>
