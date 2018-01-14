@@ -80,7 +80,7 @@ session_start();
                 if (isset($_SESSION['id'])){
                     echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>';
                 }else{
-                    echo '<li><a href="login.html"><span class="glyphico glyphicon-log-in"></span> Login</a></li>';
+                    echo '<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
                 }
                 ?>
             </ul>
