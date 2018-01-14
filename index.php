@@ -70,7 +70,7 @@ session_start();
                 <li><a href="cv.php">CV</a></li>
                 <?php
                 if (isset($_SESSION['id'])){
-                    echo '<li><a href="controllTable.php">Controll table</a></li>';
+                    echo '<li><a href="controllTable.php"><span style="color: royalblue">Controll table</span></a></li>';
                 }
                 ?>
 

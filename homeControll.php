@@ -77,7 +77,7 @@ $id=$_SESSION['id'];
     <h3>Content in home</h3><br>
     <div>
         <div>';?>
-        <table style="width:100%" border="1">
+        <table style="width:100%" border="0">
             <?php
             $dataName = "homeData";
             $sql="SELECT * FROM `$dataName` where 1";

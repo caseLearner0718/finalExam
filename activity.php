@@ -9,9 +9,6 @@ session_start();
 
 if(isset($_SESSION['id'])){
     include ("mysql_connect.inc.php");
-    $sql="SELECT *FROM user where id ='id'";
-    $result = mysqli_query($link,$sql);
-    $row = @mysqli_fetch_row($result);
 }
 ?>
 <!DOCTYPE html>
@@ -106,47 +103,39 @@ if(isset($_SESSION['id'])){
         <!-- -------------------- International Journal  ------------------------------------ -->
         <div id="home" class="tab-pane fade in active">
             <ol class='pubList'>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> The 3rd among the winners of 2013 III Technology Contest (Project: Community-based Healthcare Service).<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Nomination for 2013 R&D 100 Awards (Project: Community-based Healthcare Service).<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> A winner of Microsoft Fellowship 2005.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> An intern in the Wireless and Networking Group, Microsoft Research, Asia, Beijing, China, from March to September 2006.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> 2011 Who's Who in the World.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> 2007 Who's Who in Science and Engineering.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> A Member of IEEE, ACM, and IEICE.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> A Member of IEEE Communications Society.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Editorial board of<br><br></font>
-                <ul><a target="_blank" href="http://www.pspchv.com/editorial_board_PJCSET.html">Pioneer Journal of Computer Science and Engineering Technology</a></ul>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Executive Committee Member of<br><br></font>
-                <ul>2017 International Conference for Big Data and AI in Medical &amp; FinTech</ul>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Technical Program Committee Member of<br><br></font>
-                <ul>IEEE International Conference on Networking and Services 2005 (ICNS)</ul>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Patent and Technology Counseling Committee Member of<br><br></font>
-                <ul>Asia University (Aug., 2017 ~ Jul., 2018)</ul>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Conference Session Chair of<br><br></font>
-                <ul>2017 Taiwan Conference on Software Engineering (TCSE 2017)</ul>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Journal/Conference Reviewer or Referee of<br><br></font>
-                <ul>IEEE Journal on Selected Areas in Communications (JSAC)</ul>
-                <ul>IEEE Communications Letters</ul>
-                <ul>ELSEVIER Computer Communications</ul>
-                <ul>ELSEVIER Computer Networks</ul>
-                <ul>IET Communications</ul>
-                <ul>IEEE Signal Processing Letters</ul>
-                <ul>Journal of High Speed Networks</ul>
-                <ul>Journal of Information Science and Engineering</ul>
-                <ul>The 2007 International Conference on Parallel Processing (ICPP 2007)</ul>
-                <ul>Consumer Communications & Networking Conference (CCNC 2007)</ul>
+                <?php
+                include("mysql_connect.inc.php");
+                $dataName = "activity_PA_Date";
+                $sql="SELECT * FROM `$dataName` where 1";
+                $result = mysqli_query($link,$sql);
+                while($row = @mysqli_fetch_row($result))
+                {
+                    echo "<span lang=\"EN-US\" style=\"FONT-SIZE: 8pt; FONT-FAMILY: Wingdings\">l</span><font size=\"4\" face=\"Times New Roman\">";
+                    echo "$row[1]";
+                    echo "<br><br></font>";
+                    echo "
+                        ";
+                }
+                ?>
             </ol>
         </div>
 
         <div id="menu2" class="tab-pane fade">
             <ol class='pubList'>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> He participated the National Computer Programming Competition (university	group) and finished masterpiece in 2002.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> He participated the Computer Programming Competition of the Department of	Information and Computer Education, National Taiwan Normal University and obtained third award in 2002.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> An honor student award of the Department of Mathematics, National Taiwan Normal University in 2001.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> A cadre member: for example, a class chairman, general affairs, etc.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> He has been awarded a variety of fellowships and commendations: such as (1) Pao-An Temple (generally known as “Ta-Lon Tong Ta-Tao-Gon Temple”) in 2001, 2002, 2003, (2) Lung-Shan Temple, Taipei in 2002, and (3) a farmers' association from 1999 to 2002, etc.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> An honor student award of the Department of Computer Science and Information Engineering, National Chiao Tung University in 2004.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Exempt from entrance examination for admission to Ph. D. program of the Department of Computer Science and Information Engineering, National Chiao Tung University directly in 2004.<br><br></font>
+                <?php
+                include("mysql_connect.inc.php");
+                $dataName2 = "activity_AA_Date";
+                $sql2="SELECT * FROM `$dataName2` where 1";
+                $result2 = mysqli_query($link,$sql2);
+                while($row2 = @mysqli_fetch_row($result2))
+                {
+                    echo "<span lang=\"EN-US\" style=\"FONT-SIZE: 8pt; FONT-FAMILY: Wingdings\">l</span><font size=\"4\" face=\"Times New Roman\">";
+                    echo "$row2[1]";
+                    echo "<br><br></font>";
+                    echo "
+                        ";
+                }
+                ?>
             </ol>
         </div>
     </div>

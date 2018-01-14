@@ -24,12 +24,11 @@ session_start();
     if($_SESSION['id'] != null){
         echo "<div id=\"fullscreen_bg\" class=\"fullscreen_bg\"/>";
         echo "<div class=\"container\"><br><br><br><br><br><br><br>";
-        echo "<a href='update.php'><button class=\"btn btn-lg btn-primary btn-block\">修改</button></a><br>";
         echo "<a href='homeControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Home</button></a><br>";
-        echo "<a href='homeControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Profile</button></a><br>";
-        echo "<a href='homeControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Activity</button></a><br>";
-        echo "<a href='homeControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Program</button></a><br>";
-        echo "<a href='homeControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Publication</button></a><br>";
+        echo "<a href='profileControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Profile</button></a><br>";
+        echo "<a href='activityControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Activity</button></a><br>";
+        echo "<a href='programControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Program</button></a><br>";
+        echo "<a href='publicationControll.php'><button class=\"btn btn-lg btn-primary btn-block\">Publication</button></a><br>";
         echo "<a href='homeControll.php'><button class=\"btn btn-lg btn-primary btn-block\">CV</button></a><br>";
         echo "</div></div>";
     }

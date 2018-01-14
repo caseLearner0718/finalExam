@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<title>Music Vedio Box</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+</script>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image/logo.png" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>Movie video box</b></h4>
+    <p class="w3-text-grey">song list</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#First_part" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>BTS</a>
+    <a href="#Second_part" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Hip hop</a>
+    <a href="#Third_part" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Kpop</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header>
+    <a href="#"><img src="image/logo.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Music Vedio Box</b></h1>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding" id="First_part">
+    <h1>BTS</h1>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/kTlv5_Bs8aw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BTS 'MIC Drop (Steve Aoki Remix)' Official MV</b></p>
+        <p>Music Video by GDW, Directed by Woogie Kim
+          Producer: Cathy Kim
+          Production Supervisor: Andy Iere Kim...</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/9DwzBICPhdM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BTS 'Not Today' Official MV</b></p>
+        <p>Music Video by GDW
+          Choreography & performance direction: Sungdeuk Son
+          Choreography by: Keone Madrid...
+        </p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/2gWIjRqvtnI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BTS I NEED U (Original ver.)</b></p>
+        <p>*English subtitles are now available. :D
+          (Please click on 'CC' button or activate 'Interactive Transcript' function)
+          [Notice] 1theK YouTube is...</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/MBdVXkSdhwU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BTS 'DNA' Official MV</b></p>
+        <p>Director : YongSeok Choi (Lumpens)
+          Assistant Director : WonJu Lee (Lumpens)
+          Director of Photography : HyunWoo Nam(GDW)...</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/hmE9f-TEutc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BTS (Blood Sweat & Tears)' Official MV</b></p>
+        <p>Director: YongSeok Choi (Lumpens)
+          Assistant Directors: Edie YooJeong Ko (Lumpens)
+          Director of Photography: HyunWoo Nam(GDW)...</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/xEeFrLSkMm8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BTS (Spring Day) Official MV</b></p>
+        <p>Director : YongSeok Choi (Lumpens)
+          Assistant Directors : WonJu Lee (Lumpens)
+          Director of Photography : HyunWoo Nam(GDW)...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <!-- Second part-->
+  <div class="w3-row-padding" id="Second_part">
+    <h1>Hip hop</h1>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/2Vv-BfVoq4g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Ed Sheeran - Perfect (Official Music Video)</b></p>
+        <p>Director | dp Jason Koenig
+          Producer: Honna Kimmerer
+          Starring: Ed Sheeran & Zoey Deutch...</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/JGwWNGJdvx8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Ed Sheeran - Shape of You [Official Video]</b></p>
+        <p>Director|DOP: Jason Koenig
+          Producer: Honna Kimmerer
+          Production company: Anonymous Content...</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/RgKAFK5djSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack</b></p>
+        <p>Stream Furious 7 on Spotify: http://smarturl.it/streamFurious7
+          Directed by: Marc Klasfeld...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/2N3tsq-0FHA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Champion (Remix) || Fall Out Boy ft. RM</b></p>
+        <p>On December 15 (KST), the American rock band surprised K-Pop fans by uncovering a special version of "Champion
+          " featuring the top...</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/-Ww2v7Ahs6o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Ellen Kim | @TheRealEve 'Eve'</b></p>
+        <p>The best thing about dance is being able to get down with some friends!! Taught and shot this super quick!! Hope ya'll enjoyyyyy!!</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/BQ0mxQXmLsk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Camila Cabello - Havana ft. Young Thug</b></p>
+        <p>Preorder the new album "Camila" at:
+          Apple Music: http://smarturl.it/Camila_AM
+          iTunes: http://smarturl.it/Camila_iTunes...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <!-- Third part-->
+  <div class="w3-row-padding" id="Third_part">
+    <h1>Kpop</h1>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/4OrCA1OInoo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>TAEYEON 'I (feat. Verbal Jint)' MV</b></p>
+        <p>TAEYEON's first solo album "I" has been released.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/UwuAPyOImoI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>TAEYANG (EYES, NOSE, LIPS) M/V</b></p>
+        <p>Available on iTunes @ http://smarturl.it/TAEYANG_RISE</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/xXWyJEo6VgA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>Wanna One - 'Beautiful M/V (Performance ver.)</b></p>
+        <p>'TO BE ONE' Prequel Repackage album 『1-1=0 (NOTHING WITHOUT YOU)』
+          The title track 'Beautiful' talks about the fear and longing for the past and the yearning for the future...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/Amq-qlqbjYA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>BLACKPINK (AS IF IT'S YOUR LAST)' M/V</b></p>
+        <p>Download on iTunes @ http://smarturl.it/BLACKPINK_3RD
+          Download on AppleMusic @ http://smarturl.it/3RD_BLACKPINK</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/zEkg4GBQumc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>[M/V] SEVENTEEN (Don't Wanna Cry)</b></p>
+        <p>by seventeen.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/IdssuxDdqKk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="w3-container w3-white">
+        <p><b>EXO 'Ko Ko Bop' MV</b></p>
+        <p>[Tracklist]
+          01 ?? (前夜) (The Eve)
+          02 Ko Ko Bop...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-main" style="margin-left:300px">
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+          <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+          <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>List of members</h3>
+      <p>鄭雅韵 105024126
+          王文宏 106024136
+          劉彥昀105024213
+          陳夢晴 105024210
+          鄔凱璇 105024125</p>
+    </div>
+  </div>
+  </footer>
+<!-- End page content -->
+</div>
+
+</body>
+</html>

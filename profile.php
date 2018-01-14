@@ -9,9 +9,6 @@ session_start();
 
 if(isset($_SESSION['id'])){
     include ("mysql_connect.inc.php");
-    $sql="SELECT *FROM user where id ='id'";
-    $result = mysqli_query($link,$sql);
-    $row = @mysqli_fetch_row($result);
 }
 ?>
 <!DOCTYPE html>
@@ -105,28 +102,41 @@ if(isset($_SESSION['id'])){
         <li><a data-toggle="tab" href="#menu4">Research Interests</a></li>
     </ul>
     <div class="tab-content">
-        <!-- -------------------- International Journal  ------------------------------------ -->
         <div id="home" class="tab-pane fade in active">
             <ol class='pubList'>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Ph. D. degree: Department of Computer Science, National Chiao Tung University, Sep., 2004 ~ Jun., 2008.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> M.S. degree: Department of Computer Science and Information Engineering, National Chiao Tung University, Sep., 2003 ~ Jun., 2004. (He enrolled into Ph. D. program directly)<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Two Bachelor degrees: (1) Department of Mathematics, and (2) Department of Information and Computer Education, National Taiwan Normal University, Sep., 1999 ~ Jun., 2003.<br><br></font>
+                <?php
+                include("mysql_connect.inc.php");
+                $dataName = "profile_EB_Data";
+                $sql="SELECT * FROM `$dataName` where 1";
+                $result = mysqli_query($link,$sql);
+                while($row = @mysqli_fetch_row($result))
+                {
+                    echo "<span lang=\"EN-US\" style=\"FONT-SIZE: 8pt; FONT-FAMILY: Wingdings\">l</span><font size=\"4\" face=\"Times New Roman\">";
+                    echo "$row[1]";
+                    echo "<br><br></font>";
+                    echo "
+                        ";
+                }
+                ?>
             </ol>
         </div>
 
         <div id="menu2" class="tab-pane fade">
             <ol class='pubList'>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Chief of Development Division, Big Data Research Center, Asia University, May, 2017 ~ Present.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Associate Professor of Practice, Department of Computer Science and Information Engineering, Asia University, Feb., 2017 ~ Present.
-                    <br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Manager, Business Operation Division, LOFTechnology, Inc., Nov., 2014 ~ Jan., 2017.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> R&D Manager, Advanced Research Institute, Institute for Information Industry, Jul., 2011 ~ Nov., 2014.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Assistant Research Fellow, Information and Communications Technology Lab (under Diamond Program), Microelectronics and Information Systems Research Center, National Chiao Tung University, Aug., 2010 ~ Jul., 2011.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Assistant Research Fellow and Project Manager, Network Benchmarking Lab (NBL), National Chiao Tung University, Aug., 2010 ~ Jul., 2011.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Assistant Research Fellow and Consultant, D-Link NCTU Joint Research Center (DNJRC), National Chiao Tung University, Aug., 2010 ~ Jul., 2011.<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Postdoctoral Researcher, D-Link NCTU Joint Research Center (DNJRC), National Chiao Tung University, Jul., 2008 ~ Jul., 2010.
-                    <br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Research Intern, Wireless and Networking Group, Microsoft Research Asia, Mar., 2006 ~ Sep., 2006.<br><br></font>
+                <?php
+                include("mysql_connect.inc.php");
+                $dataName2 = "profile_PE_Data";
+                $sql2 ="SELECT * FROM `$dataName2` where 1";
+                $result2 = mysqli_query($link,$sql2);
+                while($row2 = @mysqli_fetch_row($result2))
+                {
+                    echo "<span lang=\"EN-US\" style=\"FONT-SIZE: 8pt; FONT-FAMILY: Wingdings\">l</span><font size=\"4\" face=\"Times New Roman\">";
+                    echo "$row2[1]";
+                    echo "<br><br></font>";
+                    echo "
+                        ";
+                }
+                ?>
             </ol>
         </div>
 
@@ -138,13 +148,20 @@ if(isset($_SESSION['id'])){
 
         <div id="menu4" class="tab-pane fade">
             <ol class='pubList'>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Information-Centric Networking (ICN)<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Design, Analysis, and Modeling of the Network Protocols/Congestion Control Algorithms<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Cloud Computing<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> High Speed and P2P Networking<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Mobile and Wireless Networks<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Quality of Service/Experience<br><br></font>
-                <span lang="EN-US" style="FONT-SIZE: 8pt; FONT-FAMILY: Wingdings">l</span><font size="4" face="Times New Roman"> Internet Application/APP Development<br><br></font>
+                <?php
+                include("mysql_connect.inc.php");
+                $dataName3 = "profile_RI_Data";
+                $sql3 ="SELECT * FROM `$dataName3` where 1";
+                $result3 = mysqli_query($link,$sql3);
+                while($row3 = @mysqli_fetch_row($result3))
+                {
+                    echo "<span lang=\"EN-US\" style=\"FONT-SIZE: 8pt; FONT-FAMILY: Wingdings\">l</span><font size=\"4\" face=\"Times New Roman\">";
+                    echo "$row3[1]";
+                    echo "<br><br></font>";
+                    echo "
+                        ";
+                }
+                ?>
             </ol>
         </div>
     </div>
